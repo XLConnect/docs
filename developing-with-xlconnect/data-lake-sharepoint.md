@@ -7,7 +7,7 @@ description: Using a SharePoint site to store JSON data
 Most companies will have a Office 365 subscription that comes with SharePoint, this is an ideal place to store data that you want to keep private for the company.&#x20;
 
 {% hint style="info" %}
-This is the **recommended** way to store data with XLConnect: the syntax is the easiest, and your data stays on your own Office 365 subscription.
+This is the **recommended** way to store data with XLConnect: the syntax is the easiest, and your data stays on your own Office 365 subscription. See the [SPDL module reference](../reference/modules/spdl-module.md) for all available methods.
 {% endhint %}
 
 ### Quick Demo
