@@ -72,7 +72,7 @@ file = require('file.js')
 
 The full set of modules lives in the public [XLConnect/modules](https://github.com/XLConnect/modules) repository on GitHub:
 
-* **General purpose**: [http](http-module.md), [file](file-module.md), [spdl](spdl-module.md), csv, sql, ftp, fx, util, arrayExtentions
+* **General purpose**: [http](http-module.md), [file](file-module.md), [spdl](spdl-module.md), [sql](sql-module.md), [csv](csv-module.md), [util](util-module.md), [fx](fx-module.md), [arrayExtentions](arrayextentions-module.md), ftp
 * **Cloud systems**: [xero](xero-module.md), [visma](visma-module.md), [exact](exact-module.md), [eaccounting](eaccounting-module.md), [hubspot](hubspot-module.md), [payhawk](payhawk-module.md), [brincr](brincr-module.md)
 
 Each cloud system module wraps the http module with authentication and helper methods for that platform.

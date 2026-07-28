@@ -1,27 +1,46 @@
 ---
-description: 'The mental model: scripts move messages between Excel, APIs and the data lake'
+description: 'The mental model: scripts move data between Excel, cloud APIs and the data lake'
 ---
 
 # Core Concepts
 
-<!-- TODO: expand each section. This page establishes the vocabulary the rest of the developer docs rely on. -->
+Everything in XLConnect revolves around a handful of concepts. Understand these and the rest of the documentation will fall into place.
+
+```mermaid
+flowchart LR
+    A[Cloud APIs\nXero, Visma, Exact, ...] <--> B[Scripts\njavascript in the workbook]
+    B <--> C[Excel workbook\ncells, ranges, tables]
+    B <--> D[Data lake\nSharePoint or XLC]
+```
+
+## Connected workbooks
+
+A connected workbook is a normal Excel workbook with XLConnect scripts and connections inside. Everything you know about Excel still applies — formulas, charts, formatting. XLConnect adds the ability to pull data in, push results out, and publish controlled versions to your users.
 
 ## Scripts
 
-Javascript that lives in the workbook and runs inside Excel. Scripts read and write cells, ranges and tables, call cloud APIs and exchange messages with the data lake.
+Scripts are javascript that lives in the workbook and runs inside Excel. A script reads its **inputs** from workbook cells and tables, does its work — calling cloud APIs, reading or writing the data lake, transforming data — and writes its **outputs** back to the workbook.
 
-## Messages
+You rarely start from scratch: [import a prefab script](import-scripts.md) for your cloud platform and adapt it, or write your own in [Javascript Studio](javascript/javascript-studio.md). Users run scripts with the `Run` button on the ribbon — they never have to see the code.
 
-The JSON documents data travels in. <!-- TODO: message types, headers, keys, versions -->
+## Modules
 
-## The data lake
-
-Where your data is stored — no database design required. The recommended option is the [SharePoint Data Lake](data-lake-sharepoint.md), which stores JSON files on your own Office 365 subscription with the easiest syntax. XLConnect also offers its [own data lake](data-lake-xlc.md), used by existing workbooks. <!-- TODO: locations, folders -->
+[Modules](../reference/modules/README.md) are re-usable pieces of javascript stored outside the workbook. They wrap the repetitive parts — HTTP calls, paging, authentication, serialization — so your scripts can focus on the business logic. There are modules for [HTTP](../reference/modules/http-module.md), the [SharePoint Data Lake](../reference/modules/spdl-module.md), and cloud systems like [Xero](../reference/modules/xero-module.md), [Visma](../reference/modules/visma-module.md) and [Exact](../reference/modules/exact-module.md).
 
 ## Cloud systems
 
-External APIs such as Xero that scripts authenticate to and exchange data with. See [Cloud Systems](cloud-systems.md).
+[Cloud systems](cloud-systems.md) are the external platforms scripts talk to — Xero, Visma, Exact Online, HubSpot, Microsoft Graph and more. XLConnect comes 'batteries included' with the authentication flows built in: pass an `auth` parameter like `'xero'` and the login, token storage and refresh are handled for you.
 
-## How they fit together
+## The data lake
 
-<!-- TODO: one diagram: Excel workbook <-> script <-> (cloud APIs | data lake) -->
+Where your data is stored — as JSON files, without designing a database first. Save data from one workbook, load it in the next, and you have a workflow.
+
+The recommended option is the [SharePoint Data Lake](data-lake-sharepoint.md): your data stays on your own Office 365 subscription and the [spdl module](../reference/modules/spdl-module.md) has the easiest syntax. XLConnect also offers its [own data lake](data-lake-xlc.md), used by existing workbooks.
+
+## Publishing and versions
+
+When a workbook is ready, `Save to Cloud` publishes it to the Model Library. Users open it through `Open Workbook` — they always get the intended version, and the `Workbook History` keeps every version with the ability to roll back. This replaces mailing spreadsheets around and wondering which copy is current.
+
+## Automation
+
+Anything a user can run, a machine can run too. With [Standalone mode](javascript/standalone-mode.md), scripts run outside Excel from a task scheduler — so hundreds of workbooks can be refreshed with new data overnight, and [VBA](vba.md) can drive XLConnect actions from buttons inside the workbook.
