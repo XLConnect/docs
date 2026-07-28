@@ -6,12 +6,7 @@ description: 'The mental model: scripts move data between Excel, cloud APIs and 
 
 Everything in XLConnect revolves around a handful of concepts. Understand these and the rest of the documentation will fall into place.
 
-```mermaid
-flowchart LR
-    A[Cloud APIs\nXero, Visma, Exact, ...] <--> B[Scripts\njavascript in the workbook]
-    B <--> C[Excel workbook\ncells, ranges, tables]
-    B <--> D[Data lake\nSharePoint or XLC]
-```
+<figure><img src="../.gitbook/assets/core-concepts.svg" alt="Diagram: a script inside an Excel workbook exchanges data with Xero, Visma and the SharePoint data lake in the cloud, and with local storage on the PC"><figcaption><p>Scripts move data between Excel, the cloud and local storage</p></figcaption></figure>
 
 ## Connected workbooks
 
