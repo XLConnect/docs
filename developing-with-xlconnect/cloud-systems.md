@@ -62,7 +62,7 @@ To connect to a certain tenant:&#x20;
 ```
 // auth for vismacc has three arguments: protocol, clientId and tenantId
 
-clientId = 'isv_***' // enter the Client ID for your application from the Developer Porttal
+clientId = 'isv_***' // enter the Client ID for your application from the Developer Portal
 tenantId = 'a0b1100c-4a02-11ed-98d8-06a0b4eada6b' // can be found in Developer Portal > Integration > Customers
 
 auth = `vismacc.multi:${clientId}:${tenantId}`

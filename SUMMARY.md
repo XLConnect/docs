@@ -30,8 +30,8 @@
   * [Working with JSON data](developing-with-xlconnect/javascript/working-with-json-data.md)
   * [Advanced Javascript](developing-with-xlconnect/javascript/advanced-javascript.md)
   * [Standalone mode](developing-with-xlconnect/javascript/standalone-mode.md)
-* [Data Lake (XLC)](developing-with-xlconnect/data-lake-xlc.md)
 * [Data Lake (SharePoint)](developing-with-xlconnect/data-lake-sharepoint.md)
+* [Data Lake (XLC)](developing-with-xlconnect/data-lake-xlc.md)
 * [Excel modelling](developing-with-xlconnect/excel-modelling.md)
 * [VBA](developing-with-xlconnect/vba.md)
 

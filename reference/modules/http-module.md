@@ -12,7 +12,7 @@ For people coming from web development, node.js or deno, this replaces their fet
 
 If you want to make http calls to web services, consider the http module first. It contains wrapper methods that allow you to focus on the data instead of ceremonial code.&#x20;
 
-On your Javascript Studio window, click the Add Module button and select http
+On your Javascript Studio window, click the `Include Module` button and select http
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -96,15 +96,15 @@ accounts = http.get(uri, hds, auth)
 
 ## The auth parameter
 
-The auth parameter serves two purposes. It determines the authentication to be used, and it allows you to save multiple tokens for that platform. The latter is handy for platforms like Visma.Net that hardcode the system into the token on login, as opposed to systems liek Xero or Exact that have one token and let you decide which organisation to pull in the request.&#x20;
+The auth parameter serves two purposes. It determines the authentication to be used, and it allows you to save multiple tokens for that platform. The latter is handy for platforms like Visma.Net that hardcode the system into the token on login, as opposed to systems like Xero or Exact that have one token and let you decide which organisation to pull in the request.&#x20;
 
 ### Default Auth parameter (no name supplied)
 
-The code sample below shows a unnamed auth parameter, it will be stored as 'visma.net' in the manage tokens screen.&#x20;
+The code sample below shows an unnamed auth parameter, it will be stored as 'visma.net' in the manage tokens screen.&#x20;
 
 ```
 auth = 'visma.net'
-http.get(uri, auth)
+http.get(uri, null, auth)
 ```
 
 ### Switching environments&#x20;
@@ -122,7 +122,7 @@ When you hit pull (or any operation that contacts the API) it will find no token
 
 ### Named auth parameters
 
-XLconnect allows you to store multiple tokens of the same cloud platform (protocol) simultaneously, this can save you from have to logout and back in again to switch connections. The sample below uses a 'named token':
+XLConnect allows you to store multiple tokens of the same cloud platform (protocol) simultaneously, this can save you from having to log out and back in again to switch connections. The sample below uses a 'named token':
 
 ```
 // the syntax is <protocol>:<token name> 
@@ -157,5 +157,21 @@ dat = http.get(uri, headers, auth)
 
 ## The content parameter
 
-So far we have only shows GET requests that only fetch data from the API, on the differentiating features of XLConnect is that you can also call POST, PUT, PATCH etc http methods, these will typically require a content (or 'payload').&#x20;
+So far we have only shown GET requests that only fetch data from the API, one of the differentiating features of XLConnect is that you can also call POST, PUT, PATCH etc http methods, these will typically require a content (or 'payload').&#x20;
+
+Pass the content as a javascript object, the module serializes it to json for you:
+
+```javascript
+http = require('http.js')
+
+invoice = {
+    Type : 'ACCREC',
+    Contact : { ContactID : 'a3675fc4-f8dd-4f03-ba5b-f1870566bcd7' },
+    LineItems : [
+        { Description : 'Consulting services', Quantity : 10, UnitAmount : 120.00, AccountCode : '200' }
+    ]
+}
+
+res = http.post('https://api.xero.com/api.xro/2.0/Invoices', invoice, null, 'xero')
+```
 

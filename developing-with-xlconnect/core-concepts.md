@@ -16,7 +16,7 @@ The JSON documents data travels in. <!-- TODO: message types, headers, keys, ver
 
 ## The data lake
 
-Where messages are stored — no database design required. XLConnect offers its own data lake and a [SharePoint-backed one](data-lake-sharepoint.md). <!-- TODO: locations, folders -->
+Where your data is stored — no database design required. The recommended option is the [SharePoint Data Lake](data-lake-sharepoint.md), which stores JSON files on your own Office 365 subscription with the easiest syntax. XLConnect also offers its [own data lake](data-lake-xlc.md), used by existing workbooks. <!-- TODO: locations, folders -->
 
 ## Cloud systems
 

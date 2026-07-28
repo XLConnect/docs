@@ -6,10 +6,10 @@ You can use the modules that are provided by XLConnect, or you can write and imp
 
 ## Using XLConnect modules
 
-XLConnect comes with a set of modules that encapsulate logic to deal with things like http and the Data Lake, and provide logic makes it easier to work with cloud platforms like Xero and Visma. Here's how you can add this to your code:
+XLConnect comes with a set of modules that encapsulate logic to deal with things like http and the Data Lake, and provide logic that makes it easier to work with cloud platforms like Xero and Visma. Here's how you can add this to your code:
 
 1. Open the Javascript Studio
-2.  In the toolbar, drop down the `Insert Module` button, then select the `http.js` module.&#x20;
+2.  In the toolbar, drop down the `Include Module` button, then select the `http.js` module.&#x20;
 
     <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>How to insert the http.js module</p></figcaption></figure>
 
@@ -34,9 +34,9 @@ http = require('http.js')
 http.get(uri, hds = null, auth = null)
 ```
 
-The http funcion has three parameters, weher the last two have defaults.&#x20;
+The http function has three parameters, where the last two have defaults.&#x20;
 
-3. We now need to create a variable `uri`, as the other two parameters have default values (tip you can copy from here if you hover over it, then paste it into the Code Pane):
+4. We now need to create a variable `uri`, as the other two parameters have default values (tip you can copy from here if you hover over it, then paste it into the Code Pane):
 
 ```javascript
 http = require('http.js')
@@ -44,11 +44,11 @@ uri = 'https://data.meteoserver.nl/api/uurverwachting_gfs.php?locatie=Amsterdam&
 dat = http.get(uri)
 ```
 
-4. When we execute this code with F5, it will download the weather forecast for Amsterdam for the next 10 days:
+5. When we execute this code with F5, it will download the weather forecast for Amsterdam for the next 10 days:
 
 <figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>The result of running the code above</p></figcaption></figure>
 
-5. Now double-click the get function to zoom in.&#x20;
+6. Now double-click the get function to zoom in.&#x20;
 
 Elements in the Engine pane can be zoomed in by double-clicking. When you zoom in on a function, it will show you the code. This can be helpful to understand what parameters it expects from you and what the code does.
 
@@ -62,13 +62,20 @@ The http module can be added with:&#x20;
 http = require('http.js')
 ```
 
-
-
 ### File Module for working with JSON data
 
 ```
 file = require('file.js') 
 ```
+
+### Available modules
+
+The full set of modules lives in the public [XLConnect/modules](https://github.com/XLConnect/modules) repository on GitHub:
+
+* **General purpose**: [http](http-module.md), [file](file-module.md), csv, sql, ftp, fx, util, arrayExtentions, spdl
+* **Cloud systems**: xero, visma, exact, eaccounting, brincr, hubspot, payhawk
+
+Each cloud system module wraps the http module with authentication and helper methods for that platform.
 
 
 
@@ -94,7 +101,7 @@ _ = require('https://raw.githubusercontent.com/lodash/lodash/4.17.10-npm/lodash.
 alaSql = require('https://unpkg.com/alasql@4.1.2/dist/alasql.min.js')
 ```
 
-While Lodash and Ramda are utility libraries focused on providing functional programming tools for data manipulation in JavaScript, AlaSQL is centered around SQL-like operations, allowing users to interact with data using a syntax closely mirroring traditional SQL. While Lodash and Ramda excel at data transformation using chained operations and functional paradigms, AlaSQL shines in querying, aggregating, and joining data sets in a manner reminiscent of relational databases.
+Where utility libraries like Lodash and Ramda excel at data transformation using chained operations and functional paradigms, AlaSQL shines in querying, aggregating, and joining data sets in a manner reminiscent of relational databases.
 
 ### Ramda&#x20;
 
@@ -106,7 +113,7 @@ R = require('https://raw.githubusercontent.com/ramda/ramda/master/dist/ramda.js'
 
 In contrast to Lodash, Ramda places a stronger emphasis on immutability and function composition through auto-currying. While both libraries provide utility functions for data manipulation, Lodash leans more towards general utility, whereas Ramda is firmly rooted in functional programming principles.
 
-These are just a few examples to get you started, the general way of importing external modules is through either raw.githubusercontent.com or unpkg.com, that will allow you to grab the source in a single file for the CommonJS module system XLConnect use today. We are working on supporting ES Modules as well, please let us know if this is important to you.&#x20;
+These are just a few examples to get you started, the general way of importing external modules is through either raw.githubusercontent.com or unpkg.com, that will allow you to grab the source in a single file for the CommonJS module system XLConnect uses today. We are working on supporting ES Modules as well, please let us know if this is important to you.&#x20;
 
 
 

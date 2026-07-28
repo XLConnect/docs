@@ -26,7 +26,7 @@ sw = http.get(uri)                       // get the data and assign to sw variab
 
 This code grabs data (click [here ](https://swapi.dev/api/people/)to see the raw data) about Star Wars characters. Double click the `results` element to drill down to the actual characters.&#x20;
 
-Please not this uses the [HTTP module GET](../../reference/modules/http-module.md) method that handles&#x20;
+Please note this uses the [HTTP module GET](../../reference/modules/http-module.md) method that handles&#x20;
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>GETting a uri and displaying the results. </p></figcaption></figure>
 
