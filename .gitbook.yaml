@@ -1,0 +1,14 @@
+root: ./
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+redirects:
+  developing-with-xlconnect/javascript/the-xlc-object: reference/the-xlc-object.md
+  developing-with-xlconnect/modules: reference/modules/README.md
+  developing-with-xlconnect/modules/http-module: reference/modules/http-module.md
+  developing-with-xlconnect/modules/file-module: reference/modules/file-module.md
+  developing-with-xlconnect/json-data-format: reference/json-data-format.md
+  developing-with-xlconnect/the-xlconnect-api: reference/the-xlconnect-api.md
+  developing-with-xlconnect/maps: developing-with-xlconnect/core-concepts.md
