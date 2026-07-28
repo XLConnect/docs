@@ -28,9 +28,15 @@ You rarely start from scratch: [import a prefab script](import-scripts.md) for y
 
 ## The data lake
 
-Where your data is stored — as JSON files, without designing a database first. Save data from one workbook, load it in the next, and you have a workflow.
+Where your data is stored — as JSON files, without designing a database first. Data in the data lake is **shared between users**: save data from one workbook and a colleague loads it into theirs. That is how multi-user workflows are built — data flows through several workbooks, each adding its part, towards the final result.
 
-The recommended option is the [SharePoint Data Lake](data-lake-sharepoint.md): your data stays on your own Office 365 subscription and the [spdl module](../reference/modules/spdl-module.md) has the easiest syntax. XLConnect also offers its [own data lake](data-lake-xlc.md), used by existing workbooks.
+The recommended option is the [SharePoint Data Lake](data-lake-sharepoint.md): your data stays on your own Office 365 subscription, SharePoint keeps version history, and the [spdl module](../reference/modules/spdl-module.md) has the easiest syntax. XLConnect also offers its [own data lake](data-lake-xlc.md), used by existing workbooks.
+
+## Local storage
+
+Scripts can also read and write files on the PC itself, in the XLConnect data folder (`AppData/XLConnect/Data`). Local storage is **shared between workbooks** on the same computer — but not with other users. That makes it the right place for caches and intermediate results: for example, the [Xero module](../reference/modules/xero-module.md) syncs journals to local files so repeated reporting pulls are fast and light on API rate limits.
+
+Work with local files through the [FILE module](../reference/modules/file-module.md), or the raw [file methods on the xlc object](../reference/the-xlc-object.md#datalake).
 
 ## Publishing and versions
 
