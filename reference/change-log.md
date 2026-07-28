@@ -15,7 +15,7 @@ description: See changes per version
 * **Partner model**, the ribbon tab now shows the partner name instead of "XLConnect" to allow partners to have a branded 'shop' for their content in their users' Excel.&#x20;
 * **Cleaned up UI** buttons that don't work for a user because they do not have the required roles are hidden resulting in a cleaner UI for both normal users and developers.&#x20;
 * **Re-order scripts** by drag & drop much requested option to re-order scripts
-* [**xlc.requireScope**](../developing-with-xlconnect/javascript/the-xlc-object.md#scopes) script command to add ensure the scopes you need for your app are added without requiring user involvement&#x20;
+* [**xlc.requireScope**](the-xlc-object.md#scopes) script command to add ensure the scopes you need for your app are added without requiring user involvement&#x20;
 * **Default table style** set to **Light 9** to prevent the less attractive default table style
 * **New** [**cloud systems**](../developing-with-xlconnect/cloud-systems.md)**:**&#x20;
   * Payhawk
@@ -28,7 +28,7 @@ description: See changes per version
   * QuickBooks Online
   * Exact Online
   * Visma Client Credentials
-* **New** [**xlc.progress**](../developing-with-xlconnect/javascript/the-xlc-object.md#xlc.progress-int-value-1-string-message-null-int-max-0) method for simplified progress reporting
+* **New** [**xlc.progress**](the-xlc-object.md#xlc.progress-int-value-1-string-message-null-int-max-0) method for simplified progress reporting
 
 ## 2.8.5
 

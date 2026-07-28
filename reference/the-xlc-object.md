@@ -10,7 +10,7 @@ In javascript, you can always access the static xlc object to perform certain ac
 
 The main task of the xlc object is to enable the javascript engine to perform http request to get and put data to from and to cloud api's.&#x20;
 
-**Please note**: in most cases it is recommended to use a [module](../modules/), as that wil wrap a lot of repetitve code. Either the http module or one specific to the cloud system you want to use.&#x20;
+**Please note**: in most cases it is recommended to use a [module](modules/), as that wil wrap a lot of repetitve code. Either the http module or one specific to the cloud system you want to use.&#x20;
 
 ### Arguments
 
@@ -40,7 +40,7 @@ headers = {
 }
 ```
 
-* **auth :** string the [cloud system](../cloud-systems.md) used, so XLConnet can handle the authentication for you.&#x20;
+* **auth :** string the [cloud system](../developing-with-xlconnect/cloud-systems.md) used, so XLConnet can handle the authentication for you.&#x20;
 
 Auth can be either just the protocol, say 'xero', or it can have a named connection protocol:name. This is useful for certain cloud systems like Visma and Hubspot that put the tenant id in the access token. By using named tokens you can still connect to multiple istances.&#x20;
 

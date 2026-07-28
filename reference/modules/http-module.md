@@ -144,7 +144,7 @@ for(country of countries){
 
 ## The headers parameter
 
-The headers parameter is a javascript object where every property will be a header in the [http request](../javascript/calling-apis-with-http-requests.md#headers).&#x20;
+The headers parameter is a javascript object where every property will be a header in the [http request](../../developing-with-xlconnect/javascript/calling-apis-with-http-requests.md#headers).&#x20;
 
 ```
 uri = 'https://api.xero.com/api.xro/2.0/accounts'

@@ -4,7 +4,7 @@ description: Work with local JSON data on your own computer
 
 # FILE module
 
-The file module lets you read and write data to the [Data Lake](../data-lake-xlc.md). Here's a quick example of how to use the write and read methods on the file module:
+The file module lets you read and write data to the [Data Lake](../../developing-with-xlconnect/data-lake-xlc.md). Here's a quick example of how to use the write and read methods on the file module:
 
 ```
 file = require('file.js') // use the file module 

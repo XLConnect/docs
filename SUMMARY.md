@@ -1,10 +1,13 @@
 # Table of contents
 
 * [XLConnect Documentation](README.md)
+* [What is XLConnect?](what-is-xlconnect.md)
+* [Installing the add-in](installing-the-add-in.md)
 
 ## Using XLConnect
 
 * [Getting Started](using-xlconnect/getting-started.md)
+* [Quickstart](using-xlconnect/quickstart.md)
 * [Using XLConnect](using-xlconnect/using-xlconnect.md)
 * [Manage Users](using-xlconnect/manage-users.md)
 * [Manage Your Subscription (Owners)](using-xlconnect/manage-your-subscription-owners.md)
@@ -14,6 +17,8 @@
 ## Developing with XLConnect
 
 * [Getting Started](developing-with-xlconnect/getting-started.md)
+* [Quickstart](developing-with-xlconnect/quickstart.md)
+* [Core Concepts](developing-with-xlconnect/core-concepts.md)
 * [The Bigger Picture](developing-with-xlconnect/the-bigger-picture.md)
 * [Import Scripts](developing-with-xlconnect/import-scripts.md)
 * [Scripts](developing-with-xlconnect/scripts.md)
@@ -23,20 +28,19 @@
   * [Javascript language](developing-with-xlconnect/javascript/javascript-language.md)
   * [Calling API's with HTTP Requests](developing-with-xlconnect/javascript/calling-apis-with-http-requests.md)
   * [Working with JSON data](developing-with-xlconnect/javascript/working-with-json-data.md)
-  * [The xlc object](developing-with-xlconnect/javascript/the-xlc-object.md)
   * [Advanced Javascript](developing-with-xlconnect/javascript/advanced-javascript.md)
   * [Standalone mode](developing-with-xlconnect/javascript/standalone-mode.md)
-* [Modules](developing-with-xlconnect/modules/README.md)
-  * [HTTP module](developing-with-xlconnect/modules/http-module.md)
-  * [FILE module](developing-with-xlconnect/modules/file-module.md)
-* [Maps](developing-with-xlconnect/maps.md)
-* [JSON Data Format](developing-with-xlconnect/json-data-format.md)
-* [Data Lake (SharePoint)](developing-with-xlconnect/data-lake-sharepoint.md)
 * [Data Lake (XLC)](developing-with-xlconnect/data-lake-xlc.md)
+* [Data Lake (SharePoint)](developing-with-xlconnect/data-lake-sharepoint.md)
 * [Excel modelling](developing-with-xlconnect/excel-modelling.md)
 * [VBA](developing-with-xlconnect/vba.md)
-* [The XLConnect API](developing-with-xlconnect/the-xlconnect-api.md)
 
 ## Reference
 
+* [The xlc object](reference/the-xlc-object.md)
+* [Modules](reference/modules/README.md)
+  * [HTTP module](reference/modules/http-module.md)
+  * [FILE module](reference/modules/file-module.md)
+* [The XLConnect API](reference/the-xlconnect-api.md)
+* [JSON Data Format](reference/json-data-format.md)
 * [Change log](reference/change-log.md)

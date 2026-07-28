@@ -23,11 +23,11 @@ If you have the developer option enabled for your account, your ribbon should no
 Here is a quick rundown of the new buttons on your ribbon:&#x20;
 
 * **Taskpanes**
-  * **Maps and Scripts** opens a taskpane on the right where you can see and edit the [Maps ](maps.md)and [Scripts ](javascript/javascript-studio.md)in the workbook.&#x20;
+  * **Maps and Scripts** opens a taskpane on the right where you can see and edit the [Scripts ](javascript/javascript-studio.md)in the workbook.&#x20;
 * **Develop**
   * **Import Prefab** let's you [import ready made scripts](import-scripts.md) to connect to your cloud platform by dragging and dropping elements, without having to write any code
   * **Javascript Studio** is the [javascript editor](scripts.md) that comes with XLConnect, that allows you to write code and see the results.&#x20;
-  * **Connect Cells** lets you [add workbook cells](maps.md#adding-cells-ranges-and-tables-to-a-map), ranges and tables to maps and scripts.&#x20;
+  * **Connect Cells** lets you add workbook cells, ranges and tables to your scripts.&#x20;
   * **Save to Cloud** saves your workbook to the database, so users can open it through Open Workbook.&#x20;
   * **Other**
     * **Sheet Sizes** lets you see the Used Ranges in your workbook, to find cells that appear empty but are 'used', bloating your workbook size without adding any value.&#x20;

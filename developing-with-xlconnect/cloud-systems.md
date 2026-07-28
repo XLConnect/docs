@@ -6,9 +6,9 @@ description: List of cloud systems
 
 XLConnect comes 'batteries included' with authentication to cloud systems built in, so you can get straight to the business logic.&#x20;
 
-When making [HTTP ](modules/http-module.md)calls, the final parameter is `auth` to indicate the cloud system you want to authenticate to.&#x20;
+When making [HTTP ](../reference/modules/http-module.md)calls, the final parameter is `auth` to indicate the cloud system you want to authenticate to.&#x20;
 
-Below is a simple example of a direct http call, please note that these cloud systems also have a [javascript module](modules/) with helper methods.&#x20;
+Below is a simple example of a direct http call, please note that these cloud systems also have a [javascript module](../reference/modules/) with helper methods.&#x20;
 
 ```
 http = require('http.js')
