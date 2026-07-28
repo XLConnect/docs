@@ -20,7 +20,7 @@ XLConnect keeps the strengths and fixes the weak points:
 
 Three concepts carry the whole platform. Understand these and the rest of the documentation will fall into place:
 
-* **Scripts** — Javascript that runs inside your workbook. Scripts read and write cells, ranges and tables, call cloud APIs and move data in and out of the data lake. You can [import ready-made scripts](developing-with-xlconnect/import-scripts.md) or write your own in [Javascript Studio](developing-with-xlconnect/javascript/javascript-studio.md).
+* **Scripts** — Javascript that runs inside your workbook. Scripts read and write cells, ranges and tables, call cloud APIs and move data in and out of the data lake. XLConnect is 'batteries included': authentication to cloud systems is built in, so there is no boilerplate to write — you get straight to the business logic. You can [import ready-made scripts](developing-with-xlconnect/import-scripts.md) or write your own in [Javascript Studio](developing-with-xlconnect/javascript/javascript-studio.md).
 * **Messages** — the JSON documents that data travels in. A message can hold the inputs of a model, its results, or reference data shared between workbooks.
 * **The data lake** — where your data is stored as JSON files, without you having to design a database first — typically on your own SharePoint site. Save data from one workbook, load it in the next, and you have a workflow.
 

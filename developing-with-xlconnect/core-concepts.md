@@ -24,7 +24,15 @@ You rarely start from scratch: [import a prefab script](import-scripts.md) for y
 
 ## Cloud systems
 
-[Cloud systems](cloud-systems.md) are the external platforms scripts talk to — Xero, Visma, Exact Online, HubSpot, Microsoft Graph and more. XLConnect comes 'batteries included' with the authentication flows built in: pass an `auth` parameter like `'xero'` and the login, token storage and refresh are handled for you.
+[Cloud systems](cloud-systems.md) are the external platforms scripts talk to — Xero, Visma, Exact Online, HubSpot, Microsoft Graph and more.
+
+XLConnect comes **'batteries included'**: the authentication to these platforms is built in, so you don't write any of the boilerplate that normally dominates API integrations — no OAuth flows, token storage, refresh logic or retry handling. Pass an `auth` parameter like `'xero'` and all of that is handled for you, letting you get straight to the business logic:
+
+```javascript
+http = require('http.js')
+accounts = http.get('https://api.xero.com/api.xro/2.0/Accounts', hds, 'xero')
+// that's the whole integration — no auth code needed
+```
 
 ## The data lake
 
