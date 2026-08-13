@@ -12,3 +12,4 @@ redirects:
   developing-with-xlconnect/json-data-format: reference/json-data-format.md
   developing-with-xlconnect/the-xlconnect-api: reference/the-xlconnect-api.md
   developing-with-xlconnect/maps: developing-with-xlconnect/core-concepts.md
+  developing-with-xlconnect/the-bigger-picture: what-is-xlconnect.md

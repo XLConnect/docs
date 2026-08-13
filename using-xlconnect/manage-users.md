@@ -4,15 +4,15 @@
 
 To invite other users to your EXL Cloud subscription, use the `Manage Access` button on the taskbar.
 
-![](https://xlconnect.z6.web.core.windows.net/MAnageAccess.png)
+![](../.gitbook/assets/manage-access.png)
 
 This will bring up the `Manage Access Dialog`:
 
-![](https://xlconnect.z6.web.core.windows.net/ManageAccessDialog.png)
+![](../.gitbook/assets/manage-access-dialog.png)
 
 Click `Add` to go to the next page. There do the following steps:
 
-![](https://xlconnect.z6.web.core.windows.net/AddUserPage.png)
+![](../.gitbook/assets/add-user-page.png)
 
 * Type the email addresses of the users you want to add on the left
 * Optional: Type a welcome message to the new suers in the `Personal Message` dialog
@@ -53,8 +53,6 @@ User can save changes to the subscription database (usually this only makes sens
 
 User with Read access can edit the workbooks that come with the subscription and save them in the Content Database. This way the workbooks can be edited to better fit users requirement like logos, themes, charts, custom calculations etc and still pull data from cloud systems.
 
-See [Creating Custom Content](https://xlconnect.z6.web.core.windows.net/exl-custom-content/)
-
 #### Owner <a href="#owner" id="owner"></a>
 
 User has both Read and Write, and can also configure access for other users.
@@ -67,10 +65,10 @@ Invited users will receive an invitation email and a popup when they open Excel.
 
 Invited users will receive an email in their inbox that contains the welcome message you entered.
 
-![](https://xlconnect.z6.web.core.windows.net/IbitationEmail.png)
+![](../.gitbook/assets/invitation-email.png)
 
 #### Popup in Excel <a href="#popup-in-excel" id="popup-in-excel"></a>
 
 When users have recieved an invite, the next time they open up Excel, XLConnect will display the popup below asking thm to accept or reject the invite.&#x20;
 
-&#x20;![](https://xlconnect.z6.web.core.windows.net/YouHaveInvites.png)
+&#x20;![](../.gitbook/assets/you-have-invites.png)

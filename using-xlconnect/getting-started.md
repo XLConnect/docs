@@ -27,4 +27,8 @@ You don't need an invite to get started — you can create an account yourself:
 
 The same security note applies: your Microsoft or Xero login is only used to vouch for your identity — it does not give XLConnect access to any of your data on those platforms, and we never see your password.
 
+{% hint style="info" %}
+**Your XLConnect account is not the same as your connections to accounting platforms.** You sign in to XLConnect itself with a Microsoft or Xero account only — signing in directly with a Visma account is not possible. Platforms like Visma.net are connected *afterwards, from within XLConnect*: the first time a workbook pulls data, that platform's own login page opens in your browser, and XLConnect stores a secured access token locally for next time. So even if your organisation works with Visma, you still create your XLConnect account with a Microsoft (or Xero) login.
+{% endhint %}
+
 With your account created, [install the add-in](../installing-the-add-in.md) if you haven't yet, then follow the [Quickstart](quickstart.md) to open your first workbook.

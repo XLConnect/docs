@@ -30,7 +30,7 @@ Because workbooks come from the Model Library, everyone always opens the intende
 
 ## Cloud system connections
 
-The first time a workbook pulls from a platform like Xero, a browser opens to log in there and choose what to share. The connection (token) is then stored securely.
+Connections to accounting platforms are separate from your XLConnect login. The first time a workbook pulls from a platform like Xero or Visma.net, that platform's own login page opens in your browser — log in there with your account *for that platform* and choose what to share. XLConnect then stores a secured access token locally, so subsequent runs connect without asking again.
 
 To disconnect or switch to a different environment, go to `Settings > Advanced > Manage Tokens`, right-click the connection and choose `Delete`. The next `Run` will take you through the login again.
 

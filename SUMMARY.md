@@ -19,7 +19,6 @@
 * [Getting Started](developing-with-xlconnect/getting-started.md)
 * [Quickstart](developing-with-xlconnect/quickstart.md)
 * [Core Concepts](developing-with-xlconnect/core-concepts.md)
-* [The Bigger Picture](developing-with-xlconnect/the-bigger-picture.md)
 * [Import Scripts](developing-with-xlconnect/import-scripts.md)
 * [Scripts](developing-with-xlconnect/scripts.md)
 * [Cloud Systems](developing-with-xlconnect/cloud-systems.md)

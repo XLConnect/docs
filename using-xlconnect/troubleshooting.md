@@ -13,6 +13,10 @@ Excel sometimes disables add-ins, for example after a crash. To re-enable:
 3. Tick `XLConnect` and press `OK`.
 4. If XLConnect is not in the list, check `Manage > Disabled Items` and re-enable it there, then repeat step 3. If it's in neither list, [reinstall the add-in](../installing-the-add-in.md).
 
+## Can I sign in to XLConnect with my Visma account?
+
+No — the XLConnect account itself is created and opened with a **Microsoft or Xero** account only. Your Visma account comes into play later, *inside* XLConnect: the first time a workbook pulls Visma.net data, the Visma login page opens in your browser, you sign in there, and XLConnect stores a secured access token locally. The two logins are independent.
+
 ## "This functionality requires you to be logged in"
 
 You are not logged in, or your subscription is not active. Press `Login` on the ribbon; if the message persists, check your subscription with your owner or via `Settings > Manage Subscription...`.
