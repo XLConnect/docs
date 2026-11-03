@@ -107,6 +107,34 @@ API description can be found here: [https://developer.intuit.com/app/developer/q
 
 API description here: [https://developers.payhawk.com/](https://developers.payhawk.com/)
 
+## Moss
+
+`auth = 'moss'`
+
+[Moss](https://www.getmoss.com/) uses API keys (OAuth2 Client Credentials), so like Visma Client Credentials it runs without a user login flow and works well in [standalone mode](javascript/standalone-mode.md).&#x20;
+
+1. A Moss admin creates an API key in Moss under **Settings > Company Settings > API Keys**. This gives a **Key ID** (`kid_...`) and a **Secret Key** (`sk_...`).
+2. The first time a script uses `auth = 'moss'`, XLConnect asks for the key: enter the Key ID as `client_id`, the Secret Key as `client_secret`, and `read` or `write` as `scope` (empty means `read`).&#x20;
+3. The key is stored encrypted for your Windows account, never in the script or the workbook. Moss tokens last one hour; XLConnect gets a new one automatically, so long-running scripts keep working.
+
+```
+http = require('http.js')
+
+base = 'https://public-api.getmoss.com/v1/'
+auth = 'moss'
+
+expenses = http.get(base + 'expenses', null, auth)
+users = http.get(base + 'users', null, auth)
+```
+
+An API key belongs to one Moss organisation. To connect to several organisations, give each connection a name, for example `auth = 'moss:acme'` and `auth = 'moss:contoso'`; their keys are stored separately.&#x20;
+
+{% hint style="info" %}
+Moss requires the **`moss`** feature on the database. Enable it from the XLConnect portal (Database → Features).
+{% endhint %}
+
+API description can be found here: [https://developers.getmoss.com/](https://developers.getmoss.com/)
+
 ## Hubspot
 
 `auth = 'hubspot'`

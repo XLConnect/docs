@@ -72,14 +72,16 @@ XLConnect.Desktop.exe "C:\Jobs\Daily FX Fixer.js" my-client-account
 
 ## Notifying users of the outcome
 
-Add `--notify` to email the **owners of the database** about the run:
+Add `--notify` to email the outcome of the run:
 
 ```
 XLConnect.Desktop.exe <script> <account> --notify failure|success|both|none
 ```
 
-| Value                 | Emails owners when… |
-| --------------------- | ------------------- |
+The email goes to the users with the **Notify** role on the database (tick **Notify** for a user in the portal, on the database's users). When nobody on the database has that role yet, it goes to the **owners** instead.
+
+| Value                 | Sends an email when… |
+| --------------------- | -------------------- |
 | `failure` _(default)_ | the run fails       |
 | `success`             | the run succeeds    |
 | `both`                | every run           |
@@ -89,7 +91,7 @@ The email contains a concise summary (database, script, machine, time, and the e
 
 ## Logs
 
-Each run writes a log file next to the script: `<script>.<yyyyMMdd>.txt`. It records the credential used, the identity it ran as, and — on a failure — the full error. (A separate `…ERROR.txt` is written only as a fallback if the main log cannot be created.)
+Each run writes a log file next to the script: `<script>.<yyyyMMdd>.txt`. It records the credential used, the identity it ran as, and — on a failure — the full error. A failed run also adds the error to `<script>.<yyyyMMdd>ERROR.txt`, so failures stand out in the folder listing.
 
 ## Testing a script before scheduling
 
@@ -107,3 +109,4 @@ Open **Advanced → Setup Standalone** (Excel) or the **Standalone…** button (
 | _Standalone login failed / no token_                              | The credential was revoked, or the database it is tied to is no longer active.                                                  |
 | _Credential cannot be decrypted_                                  | The credential was created under a different Windows account than the one running the task. Re-create it as the task's account. |
 | _No standalone login named '…'_                                   | Run `XLConnect.Desktop.exe --help` to list configured accounts, or set one up.                                                  |
+| _"Connection '…' has no valid saved login, and this unattended run can't show a sign-in window."_ | The script uses a cloud system (Xero, Visma, Moss, …) that has no saved login for this Windows account. Sign in to it once interactively as the Windows account the task runs under, for example by running the script from Excel or the Desktop workbench on that machine. |
